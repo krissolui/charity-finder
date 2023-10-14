@@ -19,7 +19,7 @@ const Input = tw.input`
 	grow
 	rounded
 	w-full
-	border-none
+	border-none outline-none
 	px-4 py-2
 	text-lg
 `;
@@ -40,8 +40,10 @@ const DropDownContainer = tw.div`
 	w-[inherit] h-fit
 	px-4 py-3
 	bg-white
-	border-4 border-solid border-white rounded-b
+	rounded-b
+	border-solid border-t border-t-amber-950
 	z-10
+	drop-shadow-lg
 `;
 
 const CauseBtn = tw.div`
