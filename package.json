@@ -1,7 +1,9 @@
 {
   "name": "charity-finder",
-  "private": true,
-  "version": "0.0.0",
+  "description": "A web application that allows user to find charities",
+	"author": "Kris Lui <krissolui@gmail.com> (https://krissolui.com/)",
+  "private": false,
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
