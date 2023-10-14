@@ -15,7 +15,14 @@ const CharityList = ({ charities }: ICharityListProps) => {
 	return (
 		<Container>
 			{charities.map((charity) => (
-				<CharityCard charity={charity} key={charity.ein} />
+				<CharityCard
+					charity={charity}
+					key={
+						charity.ein && charity.ein !== ''
+							? charity.ein
+							: charity.slug
+					}
+				/>
 			))}
 		</Container>
 	);

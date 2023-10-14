@@ -44,11 +44,11 @@ const Divider = tw.div`
 `;
 
 const CharityCard = ({ charity }: ICharityCardProps) => {
-	const { name, location, ein, logoUrl } = charity;
+	const { name, location, logoUrl, slug } = charity;
 
 	return (
-		<Link to={`/charity/${ein}`}>
-			<Card key={ein}>
+		<Link to={`/charity/${slug}`}>
+			<Card key={slug}>
 				<Wrapper>
 					<LogoImg src={logoUrl ?? homeImg} />
 					<Name>{name}</Name>

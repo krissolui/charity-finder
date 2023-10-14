@@ -18,7 +18,9 @@ export const searchNonprofits = async (searchTerm: string) => {
 		const res = await axios<NonprofitsResponse>({
 			method: 'get',
 			baseURL: EVERY_ENDPOINT,
-			url: `/search/${searchTerm}?apiKey=${EVERY_API_KEY}`,
+			url: `/search/${encodeURIComponent(
+				searchTerm
+			)}?apiKey=${EVERY_API_KEY}`,
 		});
 
 		return res.data;
@@ -33,7 +35,9 @@ export const getNonprofit = async (identifier: string) => {
 	const res = await axios<NonprofitResponse>({
 		method: 'get',
 		baseURL: EVERY_ENDPOINT,
-		url: `/nonprofit/${identifier}?apiKey=${EVERY_API_KEY}`,
+		url: `/nonprofit/${encodeURIComponent(
+			identifier
+		)}?apiKey=${EVERY_API_KEY}`,
 	});
 
 	return res.data;
